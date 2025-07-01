@@ -10,18 +10,18 @@ from lib.controller.util.helper import resource_path
 
 
 class ClickFilter(QObject):
-    clicked = pyqtSignal()
+    clicked = pyqtSignal(bool)
+    isChecked = False
 
     def __init__(self, target_widget):
         super().__init__()
         self.target = target_widget
 
     def eventFilter(self, obj, event):
-        # print("Event occured")
-
         if event.type() == QEvent.Type.MouseButtonPress and event.button() == Qt.MouseButton.LeftButton:
-            print("Widget clicked!")
-            self.clicked.emit()
+            # print("Widget clicked!", self.isChecked)
+            self.clicked.emit(not self.isChecked)
+            self.isChecked = not self.isChecked
             return True  # Optional: consume event
         return False
 

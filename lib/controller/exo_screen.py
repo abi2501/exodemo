@@ -28,6 +28,8 @@ class MainWindow(QMainWindow):
         self.init_app_settings()
         self.set_slots()
 
+        self.ui.disconnect_btn.hide()
+
 
     def init_app_settings(self):
 
@@ -41,18 +43,11 @@ class MainWindow(QMainWindow):
 
         self.setStyleSheet(style)
 
-
         self.ui.treadmillctl_container.layout().addWidget(self.treadmill_ctl_widget)
         self.ui.exomusle_container.layout().addWidget(self.exomuscle_ctl_widget)
 
 
-        # self.treadmill_ctl_widget.setEnabled(False)
-        # self.exomuscle_ctl_widget.setEnabled(False)
-        # self.ui.disconnect_btn.setEnabled(False)
-
     def set_slots(self):
-        # self.ui.connect_btn.clicked.connect(self.make_connection)
-        # self.ui.disconnect_btn.clicked.connect(self.make_connection)
 
         self.ui.connect_btn.clicked.connect(lambda : self.connect_port(self.ui.connect_btn.isChecked()))
         # self.ui.disconnect_btn.clicked.connect(self.disconnect_port)

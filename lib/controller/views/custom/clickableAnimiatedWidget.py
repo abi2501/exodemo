@@ -33,7 +33,6 @@ class ClickableAnimatedWidget(QWidget):
         self.anim_shrink.setStartValue(original)
         self.anim_shrink.setEndValue(shrink)
         self.anim_shrink.setEasingCurve(QEasingCurve.Type.InOutQuad)
-
         self.anim_shrink.finished.connect(lambda: self.animate_expand(original))
         self.anim_shrink.start()
 

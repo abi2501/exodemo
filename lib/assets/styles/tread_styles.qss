@@ -8,7 +8,7 @@
 }
 
 #play_widget:enabled{
-    background-color: rgb(133,204,23);
+    background-color: #85CC17;
     border-radius: 16px;
 }
 

@@ -1,5 +1,6 @@
 <RCC>
   <qresource>
+    <file>images/pause_rect.png</file>
     <file>images/unlink_active.png</file>
     <file>images/record_btn.png</file>
     <file>images/wifi.png</file>
