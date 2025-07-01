@@ -1,0 +1,19 @@
+#tread_controls{
+    background-color: #35363F;
+}
+
+#play_widget:disabled, #left_speed_wid, #right_speed_wid, #disenable_wid, #emergent_stp_wid, #same_speed_wid{
+    background-color: #2C2D33;
+    border-radius: 16px;
+}
+
+#play_widget:enabled{
+    background-color: rgb(133,204,23);
+    border-radius: 16px;
+}
+
+#left_frwd_wid, #left_bwd_wid, #left_speed_val_wid, #right_frwd_wid, #right_bwd_wid, #right_speed_val_wid,
+#speed_ctl_wid{
+    background-color: #35363F;
+    border-radius: 16px;
+}
