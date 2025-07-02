@@ -19,9 +19,10 @@ class ClickFilter(QObject):
 
     def eventFilter(self, obj, event):
         if event.type() == QEvent.Type.MouseButtonPress and event.button() == Qt.MouseButton.LeftButton:
-            # print("Widget clicked!", self.isChecked)
-            self.clicked.emit(not self.isChecked)
+            print("Widget clicked!", self.isChecked)
             self.isChecked = not self.isChecked
+            self.clicked.emit(self.isChecked)
+
             return True  # Optional: consume event
         return False
 

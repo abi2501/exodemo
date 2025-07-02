@@ -18,39 +18,39 @@ class TreadmillControlUI(QWidget):
         self.ui = Ui_tread_ctl_widget_form()
         self.ui.setupUi(self)
 
-        self.click_filter = ClickFilter(self.ui.play_widget)
-        self.ui.play_widget.installEventFilter(self.click_filter)
+        self.play_btn = ClickFilter(self.ui.play_widget)
+        self.ui.play_widget.installEventFilter(self.play_btn)
 
-        self.click_filter.clicked.connect(self.play_btn_click)
-        self.ui.start_btn.clicked.connect(self.play_btn_click)
+        self.play_btn.clicked.connect(self.play_btn_click)
 
         self.init_settings()
 
         self.set_tread_controls_enabled(False)
 
     def play_btn_click(self, state):
+
         if self.ui.play_widget.isEnabled():
-            print("Clicke engen ", state)
-            self.click_filter.animate_click()
-            self.set_tread_ui(state)
+            self.play_btn.animate_click()
+
+        self.set_tread_ui(state)
 
     def set_tread_ui(self, state):
-        img = "play.png" if state else "pause_rect.png"
-        img = ":images/" + img
-        qIcon = QIcon()
-        qIcon.addPixmap(QPixmap(img))
 
         if state:
+            # Set play mode
             self.ui.play_widget.setStyleSheet("""background-color:#D82222""")
+            self.ui.emergent_stp_wid.setStyleSheet("""background-color:#D82222""")
+            img = ":images/" + "pause_rect.png"
         else:
+            # Set pause mode
             self.ui.play_widget.setStyleSheet("""background-color:#85CC17""")
+            self.ui.emergent_stp_wid.setStyleSheet("""background-color:#2C2D33""")
+            img = ":images/" + "play.png"
 
-        self.ui.start_btn.setIcon(qIcon)
+        self.ui.start_btn.setPixmap(QPixmap(img))
 
     def set_tread_controls_enabled(self, state):
-        # self.setEnabled(state)
         self.ui.play_widget.setEnabled(state)
-        # self.ui.start_btn
 
     def init_settings(self):
 

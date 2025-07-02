@@ -1,5 +1,9 @@
 <RCC>
   <qresource>
+    <file>images/Send Button.png</file>
+    <file>images/logger_icon.png</file>
+    <file>images/lsicon_minus_active-filled.png</file>
+    <file>images/carbon_add-filled_active.png</file>
     <file>images/pause_rect.png</file>
     <file>images/unlink_active.png</file>
     <file>images/record_btn.png</file>

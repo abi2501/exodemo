@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>518</width>
-    <height>326</height>
+    <height>355</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -94,22 +94,13 @@
      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,10">
       <item>
        <widget class="QWidget" name="play_widget" native="true">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="styleSheet">
          <string notr="true"/>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
          <item>
           <spacer name="verticalSpacer">
            <property name="orientation">
@@ -124,13 +115,31 @@
           </spacer>
          </item>
          <item alignment="Qt::AlignHCenter">
-          <widget class="QToolButton" name="start_btn">
-           <property name="text">
-            <string>...</string>
+          <widget class="QLabel" name="start_btn">
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
            </property>
-           <property name="icon">
-            <iconset resource="../../lib/assets/res.qrc">
-             <normaloff>:/images/play.png</normaloff>:/images/play.png</iconset>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../lib/assets/res.qrc">:/images/play.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string/>
            </property>
           </widget>
          </item>
@@ -201,9 +210,9 @@
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
-           <widget class="QWidget" name="stackedWidgetPage1" native="true">
+           <widget class="QWidget" name="stackedWidgetPage1">
             <layout class="QVBoxLayout" name="verticalLayout">
              <property name="spacing">
               <number>0</number>
@@ -254,7 +263,7 @@
                     <number>11</number>
                    </property>
                    <item>
-                    <widget class="QWidget" name="press_tank_wid" native="true">
+                    <widget class="QWidget" name="left_press_tank_wid" native="true">
                      <layout class="QHBoxLayout" name="press_tank_layout" stretch="10,2,5,2">
                       <item>
                        <widget class="QLabel" name="pressure_tank_lbl">
@@ -264,7 +273,7 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="pressure_decrement_btn">
+                       <widget class="QToolButton" name="left_pressure_decrement_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -278,7 +287,7 @@
                        <widget class="QLineEdit" name="lineEdit"/>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="pressure_increment_btn">
+                       <widget class="QToolButton" name="left_pressure_increment_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -292,7 +301,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="active_phase_wid" native="true">
+                    <widget class="QWidget" name="left_active_phase_wid" native="true">
                      <layout class="QHBoxLayout" name="active_phase_layout" stretch="10,2,5,2">
                       <item>
                        <widget class="QLabel" name="active_phase_lbl">
@@ -302,7 +311,7 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="activeph_decrement_btn">
+                       <widget class="QToolButton" name="left_activeph_decrement_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -316,7 +325,7 @@
                        <widget class="QLineEdit" name="lineEdit_2"/>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="activeph_increment_btn">
+                       <widget class="QToolButton" name="left_activeph_increment_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -330,7 +339,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="active_dur_wid" native="true">
+                    <widget class="QWidget" name="left_active_dur_wid" native="true">
                      <layout class="QHBoxLayout" name="active_dur_layout" stretch="10,2,5,2">
                       <item>
                        <widget class="QLabel" name="active_duration_lbl">
@@ -340,7 +349,7 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="activedur_decrement_btn">
+                       <widget class="QToolButton" name="left_activedur_decrement_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -354,7 +363,7 @@
                        <widget class="QLineEdit" name="lineEdit_3"/>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="activedur_increment_btn">
+                       <widget class="QToolButton" name="left_activedur_increment_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -368,7 +377,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="max_dur_wid" native="true">
+                    <widget class="QWidget" name="left_max_dur_wid" native="true">
                      <layout class="QHBoxLayout" name="max_dur_layout" stretch="10,2,5,2">
                       <item>
                        <widget class="QLabel" name="active_duration_lbl_2">
@@ -379,7 +388,7 @@ Duration Time(s)</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="activedur_decrement_btn_2">
+                       <widget class="QToolButton" name="left_maxdur_decrement_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -393,7 +402,7 @@ Duration Time(s)</string>
                        <widget class="QLineEdit" name="lineEdit_4"/>
                       </item>
                       <item>
-                       <widget class="QToolButton" name="activedur_increment_btn_2">
+                       <widget class="QToolButton" name="left_maxdur_increment_btn">
                         <property name="text">
                          <string/>
                         </property>
@@ -414,11 +423,26 @@ Duration Time(s)</string>
              </item>
             </layout>
            </widget>
-           <widget class="QWidget" name="stackedWidgetPage2" native="true">
-            <layout class="QVBoxLayout" name="verticalLayout_5">
+           <widget class="QWidget" name="stackedWidgetPage2">
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
-              <widget class="QWidget" name="widget" native="true">
-               <layout class="QVBoxLayout" name="verticalLayout_7">
+              <widget class="QWidget" name="exo_right_grid_wid" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_5">
                 <property name="leftMargin">
                  <number>0</number>
                 </property>
@@ -432,153 +456,171 @@ Duration Time(s)</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="press_tank_wid_3" native="true">
-                  <layout class="QHBoxLayout" name="press_tank_layout_3" stretch="10,2,5,2">
+                 <widget class="QWidget" name="exo_right_inp_layout" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_7">
+                   <property name="leftMargin">
+                    <number>11</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>11</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>11</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>11</number>
+                   </property>
                    <item>
-                    <widget class="QLabel" name="pressure_tank_lbl_3">
-                     <property name="text">
-                      <string>Pressure Tank rrr</string>
-                     </property>
+                    <widget class="QWidget" name="right_press_tank_wid" native="true">
+                     <layout class="QHBoxLayout" name="press_tank_layout_3" stretch="10,2,5,2">
+                      <item>
+                       <widget class="QLabel" name="pressure_tank_lbl_3">
+                        <property name="text">
+                         <string>Pressure Tank</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_pressure_decrement_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEdit_9"/>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_pressure_increment_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QToolButton" name="pressure_decrement_btn_3">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
-                     </property>
+                    <widget class="QWidget" name="right_active_phase_wid" native="true">
+                     <layout class="QHBoxLayout" name="active_phase_layout_3" stretch="10,2,5,2">
+                      <item>
+                       <widget class="QLabel" name="active_phase_lbl_3">
+                        <property name="text">
+                         <string>Active Phase</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_activeph_decrement_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEdit_10"/>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_activeph_increment_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_9"/>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="pressure_increment_btn_3">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QWidget" name="active_phase_wid_3" native="true">
-                  <layout class="QHBoxLayout" name="active_phase_layout_3" stretch="10,2,5,2">
-                   <item>
-                    <widget class="QLabel" name="active_phase_lbl_3">
-                     <property name="text">
-                      <string>Active Phase</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="activeph_decrement_btn_3">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_10"/>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="activeph_increment_btn_3">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QWidget" name="active_dur_wid_3" native="true">
-                  <layout class="QHBoxLayout" name="active_dur_layout_3" stretch="10,2,5,2">
-                   <item>
-                    <widget class="QLabel" name="active_duration_lbl_6">
-                     <property name="text">
-                      <string>Active Duration</string>
-                     </property>
+                    <widget class="QWidget" name="right_active_dur_wid" native="true">
+                     <layout class="QHBoxLayout" name="active_dur_layout_3" stretch="10,2,5,2">
+                      <item>
+                       <widget class="QLabel" name="active_duration_lbl_6">
+                        <property name="text">
+                         <string>Active Duration</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_activedur_decrement_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEdit_12"/>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_activedur_increment_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QToolButton" name="activedur_decrement_btn_6">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_12"/>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="activedur_increment_btn_6">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QWidget" name="max_dur_wid_3" native="true">
-                  <layout class="QHBoxLayout" name="max_dur_layout_3" stretch="10,2,5,2">
-                   <item>
-                    <widget class="QLabel" name="active_duration_lbl_5">
-                     <property name="text">
-                      <string>Maximum
+                    <widget class="QWidget" name="right_max_dur_wid" native="true">
+                     <layout class="QHBoxLayout" name="max_dur_layout_3" stretch="10,2,5,2">
+                      <item>
+                       <widget class="QLabel" name="active_duration_lbl_5">
+                        <property name="text">
+                         <string>Maximum
 Duration Time(s)</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="activedur_decrement_btn_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_11"/>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="activedur_increment_btn_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="../../lib/assets/res.qrc">
-                       <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
-                     </property>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_maxdur_decrement_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/lsicon_minus-filled.png</normaloff>:/images/lsicon_minus-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEdit_11"/>
+                      </item>
+                      <item>
+                       <widget class="QToolButton" name="right_maxdur_increment_btn">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../../lib/assets/res.qrc">
+                          <normaloff>:/images/carbon_add-filled.png</normaloff>:/images/carbon_add-filled.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>

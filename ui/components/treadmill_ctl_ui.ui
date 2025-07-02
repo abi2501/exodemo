@@ -139,13 +139,24 @@
           </spacer>
          </item>
          <item alignment="Qt::AlignHCenter">
-          <widget class="QToolButton" name="start_btn">
-           <property name="text">
-            <string>...</string>
+          <widget class="QLabel" name="start_btn">
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
            </property>
-           <property name="icon">
-            <iconset resource="../../lib/assets/res.qrc">
-             <normaloff>:/images/play.png</normaloff>:/images/play.png</iconset>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../lib/assets/res.qrc">:/images/play.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -274,6 +285,21 @@
            <item>
             <widget class="QWidget" name="right_frwd_wid" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_7">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item alignment="Qt::AlignHCenter">
                <widget class="QToolButton" name="right_forward_btn">
                 <property name="text">
@@ -297,6 +323,21 @@
            <item>
             <widget class="QWidget" name="right_speed_val_wid" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_10">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="right_speed_value">
                 <property name="styleSheet">
@@ -316,6 +357,21 @@
            <item>
             <widget class="QWidget" name="right_bwd_wid" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_8">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item alignment="Qt::AlignHCenter">
                <widget class="QToolButton" name="right_backward_btn">
                 <property name="text">
@@ -361,20 +417,23 @@
            <property name="enabled">
             <bool>true</bool>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_11">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <property name="leftMargin">
-             <number>11</number>
+             <number>5</number>
             </property>
             <property name="topMargin">
-             <number>11</number>
+             <number>5</number>
             </property>
             <property name="rightMargin">
-             <number>11</number>
+             <number>5</number>
             </property>
             <property name="bottomMargin">
-             <number>11</number>
+             <number>5</number>
             </property>
-            <item alignment="Qt::AlignHCenter">
+            <item>
              <widget class="QToolButton" name="same_speed_btn">
               <property name="styleSheet">
                <string notr="true"/>
@@ -389,8 +448,8 @@ Speed</string>
               </property>
               <property name="iconSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>30</width>
+                <height>30</height>
                </size>
               </property>
               <property name="toolButtonStyle">
@@ -403,20 +462,23 @@ Speed</string>
          </item>
          <item>
           <widget class="QWidget" name="disenable_wid" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout_20">
-            <property name="leftMargin">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
              <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
             </property>
             <property name="topMargin">
-             <number>0</number>
+             <number>5</number>
             </property>
             <property name="rightMargin">
-             <number>0</number>
+             <number>5</number>
             </property>
             <property name="bottomMargin">
-             <number>0</number>
+             <number>5</number>
             </property>
-            <item alignment="Qt::AlignHCenter">
+            <item>
              <widget class="QToolButton" name="same_speed_btn_2">
               <property name="styleSheet">
                <string notr="true"/>
@@ -444,20 +506,23 @@ Speed</string>
          </item>
          <item>
           <widget class="QWidget" name="emergent_stp_wid" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout_21">
-            <property name="leftMargin">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
              <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
             </property>
             <property name="topMargin">
-             <number>0</number>
+             <number>5</number>
             </property>
             <property name="rightMargin">
-             <number>0</number>
+             <number>5</number>
             </property>
             <property name="bottomMargin">
-             <number>0</number>
+             <number>5</number>
             </property>
-            <item alignment="Qt::AlignHCenter">
+            <item>
              <widget class="QToolButton" name="same_speed_btn_3">
               <property name="styleSheet">
                <string notr="true"/>

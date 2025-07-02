@@ -1,9 +1,11 @@
-#exo_controls, #exo_tab_widget,  #exo_left_inp_layout{
+#exo_controls, #exo_tab_widget,  #exo_left_inp_layout,  #exo_right_inp_layout{
     background-color: #35363F;
     color:#FFFFFF;
 }
 
-#play_widget:disabled, #press_tank_wid, #active_phase_wid, #active_dur_wid, #max_dur_wid{
+#play_widget:disabled,
+ #left_press_tank_wid, #left_active_phase_wid, #left_active_dur_wid, #left_max_dur_wid,
+ #right_press_tank_wid, #right_active_phase_wid, #right_active_dur_wid, #right_max_dur_wid{
     background-color: #2C2D33;
     border-radius: 16px;
 }
@@ -12,16 +14,8 @@
     background-color: #85CC17;
     border-radius: 16px;
 }
-/*
-#left_tab, #exo_controls, #tabWidget, #stackedWidget,
-#exo_tab_widget, #stackedWidgetPage1, #exo_left_grid_wid{
-    background-color: #35363F;
-    color:#FFFFFF;
-}
 
-#play_widget, #exo_left_inp_layout, #max_dur_layout, #active_dur_layout,
-#active_dur_layout, #active_phase_layout,#press_tank_layout, #exo_left_grid_wid{
-    background-color: #2C2D33;
-    border-radius: 16px;
+#exo_left_btn:enabled, #exo_right_btn:enabled{
+background-color:#202124;
+color:#FFFFFF;
 }
-*/
