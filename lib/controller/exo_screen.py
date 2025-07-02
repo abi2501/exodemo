@@ -6,6 +6,7 @@ from PyQt6.QtWidgets import QMainWindow, QMessageBox, QWidget
 
 from lib.controller.features.widgets.exomuscle_ctl_widget import ExoMuscleControlUI
 from lib.controller.features.widgets.logger_widget import LoggerUI
+from lib.controller.features.widgets.predictgait_graph_widget import PredictGaitGraphUI
 from lib.controller.features.widgets.treadmill_ctl_widget import TreadmillControlUI
 from lib.controller.util.app_manager import AppManager
 from lib.controller.util.helper import resource_path
@@ -27,10 +28,11 @@ class MainWindow(QMainWindow):
         self.exomuscle_ctl_widget = ExoMuscleControlUI()
         self.logger_widget = LoggerUI()
 
+        self.predict_gait_widget = PredictGaitGraphUI()
+
         self.init_app_settings()
         self.set_slots()
 
-        self.ui.disconnect_btn.hide()
         self.setWindowTitle("MM Treadmill system")
 
 
@@ -49,7 +51,7 @@ class MainWindow(QMainWindow):
         self.ui.treadmillctl_container.layout().addWidget(self.treadmill_ctl_widget)
         self.ui.exomusle_container.layout().addWidget(self.exomuscle_ctl_widget)
         self.ui.log_settings_container.layout().addWidget(self.logger_widget)
-
+        self.ui.predict_gait_wid.layout().addWidget(self.predict_gait_widget)
 
     def set_slots(self):
 

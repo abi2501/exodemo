@@ -69,4 +69,14 @@
     <file>images/connect.png</file>
     <file>images/disconnect.png</file>
   </qresource>
+  <qresource>
+    <file>images/strikes/strike_img_1.png</file>
+    <file>images/strikes/strike_img_2.png</file>
+    <file>images/strikes/strike_img_3.png</file>
+    <file>images/strikes/strike_img_4.png</file>
+    <file>images/strikes/strike_img_5.png</file>
+    <file>images/strikes/strike_img_6.png</file>
+    <file>images/strikes/strike_img_7.png</file>
+    <file>images/strikes/strike_img_1.png</file>
+  </qresource>
 </RCC>

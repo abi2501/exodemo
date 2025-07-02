@@ -16,6 +16,7 @@
 }
 
 #exo_left_btn:enabled, #exo_right_btn:enabled{
-background-color:#202124;
-color:#FFFFFF;
+    background-color:#202124;
+    color:#FFFFFF;
+    border-radius: 16px;
 }
