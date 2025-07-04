@@ -2,7 +2,7 @@
         font-family: 'Poppins';
  }
 
-#treadmillctl_container, #exomusle_container, #log_settings_container,#predict_gait_container, #predict_gait_wid{
+#treadmillctl_container, #exomusle_container, #log_settings_container,#predict_gait_container, #predict_gait_wid, #predict_ctl_wid{
     background-color: #35363F;
     color:#FFFFFF;
     border-radius: 20px;

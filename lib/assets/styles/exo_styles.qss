@@ -1,4 +1,4 @@
-#exo_controls, #exo_tab_widget,  #exo_left_inp_layout,  #exo_right_inp_layout{
+#exo_controls, #exo_tab_widget,  #exo_left_inp_layout,  #exo_right_inp_layout, #stackedWidget{
     background-color: #35363F;
     color:#FFFFFF;
 }

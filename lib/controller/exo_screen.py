@@ -4,6 +4,7 @@ import qdarktheme
 from PyQt6.QtGui import QShortcut, QKeySequence, QIcon, QPixmap
 from PyQt6.QtWidgets import QMainWindow, QMessageBox, QWidget
 
+from lib.controller.features.predict.predictgait_ctl_ui import PredictGaitControlUI
 from lib.controller.features.widgets.exomuscle_ctl_widget import ExoMuscleControlUI
 from lib.controller.features.widgets.logger_widget import LoggerUI
 from lib.controller.features.widgets.predictgait_graph_widget import PredictGaitGraphUI
@@ -28,7 +29,8 @@ class MainWindow(QMainWindow):
         self.exomuscle_ctl_widget = ExoMuscleControlUI()
         self.logger_widget = LoggerUI()
 
-        self.predict_gait_widget = PredictGaitGraphUI()
+        # self.predict_gait_widget = PredictGaitGraphUI()
+        self.predict_gait_widget = PredictGaitControlUI()
 
         self.init_app_settings()
         self.set_slots()
@@ -83,8 +85,11 @@ class MainWindow(QMainWindow):
         self.exomuscle_ctl_widget.setEnabled(True)
 
     def set_deactivate_mode(self):
+
         self.treadmill_ctl_widget.set_tread_controls_enabled(False)
         self.exomuscle_ctl_widget.set_exo_controls_enabled(False)
+
+
 
     def set_connection_btn(self, state):
         img = "unlink_active.png" if state else "weui_link-filled.png"

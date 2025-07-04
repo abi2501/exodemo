@@ -28,7 +28,7 @@ class ExoMuscleControlUI(QWidget):
 
     def play_btn_click(self, state):
         if self.ui.play_widget.isEnabled():
-            self.play_btn.animate_click()
+            # self.play_btn.animate_click()
             self.set_exo_ui(state)
 
     def set_stack_widget(self, idx):
@@ -41,6 +41,7 @@ class ExoMuscleControlUI(QWidget):
             self.ui.exo_right_btn.setEnabled(False)
 
         self.ui.stackedWidget.setCurrentIndex(idx)
+
     def set_exo_ui(self, state):
 
         if state:
@@ -84,13 +85,10 @@ class ExoMuscleControlUI(QWidget):
 
 
     def set_exo_controls_enabled(self, state):
+
         self.ui.play_widget.setEnabled(state)
 
-
-
     def init_settings(self):
-
-        self.setEnabled(False)
 
         styleFile = os.path.join(os.path.split(__file__)[0], resource_path("lib/assets/styles/exo_styles.qss"))
 

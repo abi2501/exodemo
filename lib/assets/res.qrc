@@ -1,5 +1,6 @@
 <RCC>
   <qresource>
+    <file>images/strikes/strike_image_3.png</file>
     <file>images/Send Button.png</file>
     <file>images/logger_icon.png</file>
     <file>images/lsicon_minus_active-filled.png</file>

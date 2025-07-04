@@ -22,8 +22,8 @@ def rounded_pixmap(pixmap, radius):
     painter.end()
     return rounded
 
-class PredictGaitGraphUI(QWidget):
 
+class PredictGaitGraphUI(QWidget):
     def __init__(self):
         super().__init__()
         self.ui = Ui_predict_gait_content()
@@ -34,13 +34,9 @@ class PredictGaitGraphUI(QWidget):
         self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.strike_image_container.layout().addWidget(self.strike_images_ui)
 
-        # self.ui.cpbar_1
-
         original_pixmap = QPixmap()  # Your image path
         self.ui.cpbar_1.setPixmap(rounded_pixmap(original_pixmap, 50))  # 50 radius = 100x100
         self.ui.cpbar_1.setFixedSize(100, 100)
         self.ui.cpbar_1.setStyleSheet("""background-color: #2ecc71;
     border-radius: 10px;
     color: white;""")
-
-

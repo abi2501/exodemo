@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/exosuit.iml" filepath="$PROJECT_DIR$/.idea/exosuit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/treads.iml" filepath="$PROJECT_DIR$/.idea/treads.iml" />
     </modules>
   </component>
 </project>

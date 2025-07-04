@@ -1,7 +1,7 @@
 # clickablewidget.py
 import os
 
-from PyQt5 import QtWidgets
+
 from PyQt6 import QtGui, QtCore
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QSpacerItem, QSizePolicy, QToolButton, QGraphicsOpacityEffect
 from PyQt6.QtCore import pyqtSignal, Qt, QRect, QPropertyAnimation, QEasingCurve, QObject, QEvent
@@ -13,13 +13,20 @@ class ClickFilter(QObject):
     clicked = pyqtSignal(bool)
     isChecked = False
 
+
     def __init__(self, target_widget):
         super().__init__()
         self.target = target_widget
+        self.enabled = True
 
     def eventFilter(self, obj, event):
+
+        if not self.enabled:
+            return False  # Let event pass normally
+
         if event.type() == QEvent.Type.MouseButtonPress and event.button() == Qt.MouseButton.LeftButton:
             print("Widget clicked!", self.isChecked)
+            self.enabled = True
             self.isChecked = not self.isChecked
             self.clicked.emit(self.isChecked)
 

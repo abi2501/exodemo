@@ -24,14 +24,15 @@ class TreadmillControlUI(QWidget):
         self.play_btn.clicked.connect(self.play_btn_click)
 
         self.init_settings()
+        self.set_slots()
 
         self.set_tread_controls_enabled(False)
 
     def play_btn_click(self, state):
 
         if self.ui.play_widget.isEnabled():
-            self.play_btn.animate_click()
-
+            # self.play_btn.animate_click()
+            pass
         self.set_tread_ui(state)
 
     def set_tread_ui(self, state):
@@ -52,6 +53,18 @@ class TreadmillControlUI(QWidget):
     def set_tread_controls_enabled(self, state):
         self.ui.play_widget.setEnabled(state)
 
+    def set_slots(self):
+        self.ui.left_forward_btn.clicked.connect(lambda : self.set_left_speed_value("+"))
+        self.ui.left_backward_btn.clicked.connect(lambda : self.set_left_speed_value("-"))
+
+    def set_left_speed_value(self, op):
+
+        if op == "+":
+            val = int(self.ui.left_speed_value.text()) + 1
+            self.ui.left_speed_value.setText(str(val))
+        elif op == "-":
+            val = int(self.ui.left_speed_value.text()) - 1
+            self.ui.left_speed_value.setText(str(val))
     def init_settings(self):
 
         styleFile = os.path.join(os.path.split(__file__)[0], resource_path("lib/assets/styles/tread_styles.qss"))

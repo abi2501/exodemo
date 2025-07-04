@@ -51,8 +51,3 @@ class PredictGaitStrikeUI(QWidget):
         self.ui.strike_image_7.setPixmap(pixmap)
         self.ui.strike_image_7.setScaledContents(True)
         self.ui.strike_image_7.setMaximumWidth(100)
-
-
-
-
-
